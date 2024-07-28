@@ -1,0 +1,30 @@
+name: schema_testing
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - asgiref=3.8.1=pyhd8ed1ab_0
+  - backports.zoneinfo=0.2.1=py39hcbf5309_8
+  - ca-certificates=2024.7.4=h56e8100_0
+  - click=8.1.7=py39haa95532_0
+  - colorama=0.4.6=py39haa95532_0
+  - django=4.2.14=pyhd8ed1ab_0
+  - krb5=1.21.3=hdf4eb48_0
+  - libpq=16.3=hab9416b_0
+  - openssl=3.3.1=h2466b09_2
+  - pip=24.0=py39haa95532_0
+  - psycopg2=2.9.9=py39h64827e7_0
+  - python=3.9.19=h1aa4202_1
+  - python-dotenv=0.21.0=py39haa95532_0
+  - python_abi=3.9=2_cp39
+  - setuptools=69.5.1=py39haa95532_0
+  - sqlite=3.45.3=h2bbff1b_0
+  - sqlparse=0.5.1=pyhd8ed1ab_0
+  - typing_extensions=4.12.2=pyha770c72_0
+  - tzdata=2024a=h04d1e81_0
+  - ucrt=10.0.22621.0=h57928b3_0
+  - vc=14.2=h2eaa2aa_4
+  - vc14_runtime=14.40.33810=ha82c5b3_20
+  - vs2015_runtime=14.40.33810=h3bf8584_20
+  - wheel=0.43.0=py39haa95532_0
+prefix: C:\Users\JeanR\miniconda3\envs\schema_testing
