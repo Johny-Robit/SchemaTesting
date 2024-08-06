@@ -10,7 +10,7 @@ class OdmAdapter:
         # Insert a parcel into the database
         try:
             parcel = Agriculturalparcel(farm_name=p_farm_name, plot_name=p_plot_name)
-            parcel.save()
+            parcel.save(using='farm')
             return True
         except Exception as e:
             print(e)

@@ -91,9 +91,6 @@ DATABASES = {
         'PASSWORD': os.getenv("DB_PASSWORD"),
         'HOST': os.getenv("DB_HOST"),
         'PORT': os.getenv("DB_PORT"),
-        'OPTIONS': {
-            'options': '-c search_path=public'
-        }
     },
     'farm': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -103,7 +100,7 @@ DATABASES = {
         'HOST': os.getenv("DB_HOST"),
         'PORT': os.getenv("DB_PORT"),
         'OPTIONS': {
-            'options': '-c search_path=odm2'
+            'options': '-c search_path=odm2,public'
         }
     }
 }
