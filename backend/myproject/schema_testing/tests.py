@@ -1,8 +1,8 @@
-from django.test import TestCase
+from django.test import TransactionTestCase
 from .odm2adapter import OdmAdapter
 
-class Odm2AdapterTestCases(TestCase):
-    databases = {'default', 'farm'}  # Ensure both databases are used in the test
+class Odm2AdapterTestCases(TransactionTestCase):
+    databases = {'farm'}  # Ensure both databases are used in the test
 
     def test_insertion(self):
         adapter = OdmAdapter()
