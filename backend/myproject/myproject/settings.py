@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'schema_testing',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,8 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+DATABASE_ROUTERS = ['myproject.FarmRouter.FarmRouter']
+
 # connecting to the database
 DATABASES = {
     'default': {
@@ -89,7 +92,18 @@ DATABASES = {
         'HOST': os.getenv("DB_HOST"),
         'PORT': os.getenv("DB_PORT"),
         'OPTIONS': {
-            'options': '-c search_path=public,schema1'
+            'options': '-c search_path=public'
+        }
+    },
+    'farm': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
+        'PORT': os.getenv("DB_PORT"),
+        'OPTIONS': {
+            'options': '-c search_path=odm2'
         }
     }
 }
